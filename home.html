@@ -190,8 +190,8 @@
 
   <!-- APPS -->
   <section class="apps" id="apps">
-    <div class="app"><h3>Roxli Astra</h3><p>A fast, secure browser built for modern India.</p></div>
     <div class="app"><h3>Roxli</h3><p>A next-gen search engine for speed & accuracy.</p></div>
+    <div class="app"><h3>Roxli Astra</h3><p>A fast, secure browser built for modern India.</p></div>
     <div class="app"><h3>Roxli Store</h3><p>Your trusted marketplace for apps.</p></div>
     <div class="app"><h3>Roxli Mail</h3><p>Smart & secure email, made in India.</p></div>
     <div class="app"><h3>Roxli Viora</h3><p>Stream videos seamlessly with Roxli Viora.</p></div>
@@ -208,14 +208,15 @@
   <!-- CONTACT -->
   <section class="contact" id="contact">
     <h2>Contact Us</h2>
-    <form action="mailto:your-email@gmail.com" method="post" enctype="text/plain">
+    <!-- ✅ Netlify Form Setup -->
+    <form name="contact" method="POST" data-netlify="true">
       <input type="text" name="Name" placeholder="Your Name" required>
       <input type="email" name="Email" placeholder="Your Email" required>
       <textarea name="Message" placeholder="Your Message" rows="5" required></textarea>
       <button type="submit">Send Message</button>
     </form>
     <p style="margin-top:10px; font-size:0.9rem; color:silver;">
-      Click "Send Message" → Your email client will open automatically.
+      Your message will be sent securely to us via Netlify.
     </p>
   </section>
 

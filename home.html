@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ROXLI</title>
+  <title>Roxli Ecosystem</title>
 
   <!-- ✅ Favicon -->
   <link rel="icon" type="image/png" href="logo2.png">
@@ -47,61 +47,37 @@
       border-bottom: 2px solid #00ffcc;
     }
     header img {
-      height: 60px;
+      height: 50px;
     }
+
+    /* Hero */
     .hero {
       text-align: center;
-      padding: 100px 20px;
+      padding: 100px 20px 50px 20px;
     }
-    .hero h1 {
+    .hero h2 {
       font-size: 3rem;
       text-transform: uppercase;
+      animation: glow 2s infinite alternate;
+    }
+    .hero p {
+      margin-top: 15px;
+      font-size: 1.2rem;
+      color: #ffcc00;
+    }
+    .made-india {
+      margin-top: 25px;
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #00ffcc;
+      text-shadow: 0 0 10px #00ffcc, 0 0 20px #ff00cc;
       animation: glow 2s infinite alternate;
     }
     @keyframes glow {
       from { text-shadow: 0 0 10px #00ffcc; }
       to { text-shadow: 0 0 20px #ff00cc; }
     }
-    .made-in-india {
-      margin-top: 10px;
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: #00ffcc;
-      animation: pulse 2s infinite;
-    }
-    @keyframes pulse {
-      0% { opacity: 0.4; }
-      50% { opacity: 1; }
-      100% { opacity: 0.4; }
-    }
-    .coming-soon {
-      margin-top: 25px;
-      font-size: 1.5rem;
-      color: #ffcc00;
-      animation: typing 4s steps(20, end) infinite alternate;
-      white-space: nowrap;
-      overflow: hidden;
-      border-right: 2px solid #ffcc00;
-      display: inline-block;
-    }
-    @keyframes typing {
-      from { width: 0; }
-      to { width: 18ch; }
-    }
-    .about {
-      max-width: 900px;
-      margin: 30px auto 60px auto;
-      padding: 0 20px;
-      text-align: center;
-    }
-    .about h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-    .about p {
-      font-size: 1.1rem;
-      margin-bottom: 10px;
-    }
+
     .section-line {
       width: 80%;
       height: 2px;
@@ -110,6 +86,25 @@
       opacity: 0.3;
       border-radius: 1px;
     }
+
+    h2, h3 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #00ffcc;
+    }
+    h2 { font-size: 2.4rem; }
+    h3 { font-size: 2rem; }
+
+    /* Video */
+    iframe {
+      width: 100%;
+      height: 450px;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,255,204,0.5);
+    }
+
+    /* Apps Grid */
     .apps {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -133,6 +128,27 @@
       margin-bottom: 10px;
       color: #00ffcc;
     }
+    .app p {
+      font-size: 0.95rem;
+      color: #ddd;
+    }
+    .app a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 15px;
+      border-radius: 8px;
+      background: #00ffcc;
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .app a:hover {
+      background: #ffcc00;
+      color: #000;
+    }
+
+    /* Contact */
     .contact {
       max-width: 600px;
       margin: 80px auto;
@@ -170,59 +186,101 @@
     .contact button:hover {
       background: #00ccaa;
     }
+
+    /* Footer */
     footer {
       background: #000;
       text-align: center;
       padding: 20px;
       margin-top: 50px;
       font-size: 0.9rem;
+      color: #bbb;
     }
+    .social-links {
+      margin-top: 15px;
+    }
+    .social-links a {
+      margin: 0 10px;
+      display: inline-block;
+      font-size: 1.2rem;
+      color: #00ffcc;
+      transition: color 0.3s ease;
+      text-decoration: none;
+    }
+    .social-links a:hover {
+      color: #ffcc00;
+    }
+
     @media(max-width: 768px) {
-      header {
-        flex-direction: column;
-      }
+      .hero h2 { font-size: 2rem; }
+      iframe { height: 250px; }
     }
   </style>
 </head>
 <body>
+
   <!-- HEADER -->
   <header>
-    <img src="logo.png" alt="ROXLI Logo">
+    <img src="logo1.png" alt="Roxli Ecosystem Logo">
   </header>
 
   <!-- HERO -->
   <section class="hero">
-    <h1>ROXLI</h1>
-    <div class="made-in-india">🇮🇳 Made in India</div>
-    <div class="coming-soon">✨ Coming Soon ✨</div>
+    <h2>Welcome to Roxli Ecosystem 🚀</h2>
+    <p>Building the future, one app at a time.</p>
+    <div class="made-india">🇮🇳 Proudly Made in India</div>
   </section>
 
   <div class="section-line"></div>
 
-  <!-- ABOUT -->
-  <section class="about" id="about">
-    <h2>About ROXLI</h2>
-    <p>ROXLI is a proudly Made in India initiative that redefines digital experiences.</p>
-    <p>It brings together innovation, speed, and security into one connected ecosystem.</p>
-    <p>From communication to entertainment, Roxli is built for India and the world.</p>
-    <p>Simple, powerful, and made with the spirit of Atmanirbhar Bharat.</p>
+  <!-- LATEST VIDEOS -->
+  <section id="video">
+    <h2>Latest Videos</h2>
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PLV-HVEnNg8Yqhgp4R-kf2W-8CA2mhs-WM" allowfullscreen></iframe>
   </section>
 
   <div class="section-line"></div>
 
-  <!-- APPS -->
-  <section class="apps" id="apps">
-    <div class="app"><h3>Roxli</h3><p>A next-gen search engine for speed & accuracy.</p></div>
-    <div class="app"><h3>Roxli Astra</h3><p>A fast, secure browser built for modern India.</p></div>
-    <div class="app"><h3>Roxli Store</h3><p>Your trusted marketplace for apps.</p></div>
-    <div class="app"><h3>Roxli Mail</h3><p>Smart & secure email, made in India.</p></div>
-    <div class="app"><h3>Roxli Viora</h3><p>Stream videos seamlessly with Roxli Viora.</p></div>
-    <div class="app"><h3>Roxli News</h3><p>Stay updated with trusted news & magazines.</p></div>
-    <div class="app"><h3>Roxli Drive</h3><p>Secure cloud storage for your digital life.</p></div>
-    <div class="app"><h3>Roxli Meet</h3><p>Video chat & meetings, smooth & reliable.</p></div>
-    <div class="app"><h3>Roxli Lenso</h3><p>Share your moments with India-first social media.</p></div>
-    <div class="app"><h3>Roxli Chat</h3><p>Messaging app built for privacy & speed.</p></div>
-    <div class="app"><h3>Roxli Cora</h3><p>Your personal AI assistant from India.</p></div>
+  <!-- LAUNCH APPS -->
+  <section id="launch">
+    <h2>Launch Apps & Websites</h2>
+    <div class="apps">
+      <div class="app">
+        <h3>Roxli.in</h3>
+        <p>Official website for the Roxli ecosystem.</p>
+        <a href="https://roxli.in" target="_blank">Visit</a>
+      </div>
+      <div class="app">
+        <h3>Roxli Accounts</h3>
+        <p>Manage your Roxli ID, login & security settings.</p>
+        <a href="https://account.roxli.in" target="_blank">Manage</a>
+      </div>
+      <div class="app">
+        <h3>Roxli Mail</h3>
+        <p>Fast, secure, and private email service.</p>
+        <a href="https://mail.roxli.in" target="_blank">Open Mail</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-line"></div>
+
+  <!-- COMING SOON -->
+  <section id="apps">
+    <h2>Coming Soon Apps & Websites</h2>
+    <div class="apps">
+      <div class="app"><h3>Roxli Astra</h3><p>A fast, secure browser built for modern India.</p></div>
+      <div class="app"><h3>Roxli</h3><p>A next-gen search engine for speed & accuracy.</p></div>
+      <div class="app"><h3>Roxli Store</h3><p>Your trusted marketplace for apps.</p></div>
+      <div class="app"><h3>Roxli Viora</h3><p>Stream videos seamlessly with Roxli Viora.</p></div>
+      <div class="app"><h3>Roxli News</h3><p>Stay updated with trusted news & magazines.</p></div>
+      <div class="app"><h3>Roxli Drive</h3><p>Secure cloud storage for your digital life.</p></div>
+      <div class="app"><h3>Roxli Meet</h3><p>Video chat & meetings, smooth & reliable.</p></div>
+      <div class="app"><h3>Roxli Lenso</h3><p>Share your moments with India-first social media.</p></div
+      <div class="app"><h3>Roxli Chat</h3><p>Messaging app built for privacy & speed.</p></div>
+      <div class="app"><h3>Roxli Cora</h3><p>Your personal AI assistant from India.</p></div>
+      <div class="app"><h3>... and many more</h3><p>Stay tuned for upcoming innovations.</p></div>
+    </div>
   </section>
 
   <div class="section-line"></div>
@@ -230,7 +288,6 @@
   <!-- CONTACT -->
   <section class="contact" id="contact">
     <h2>Contact Us</h2>
-    <!-- ✅ Netlify Form Setup -->
     <form name="contact" method="POST" data-netlify="true">
       <input type="text" name="Name" placeholder="Your Name" required>
       <input type="email" name="Email" placeholder="Your Email" required>
@@ -244,7 +301,11 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2025 ROXLI. Proudly Made in India. All rights reserved.</p>
+    © 2025 Roxli Ecosystem. Proudly Made in India. All rights reserved.
+    <div class="social-links">
+      <a href="https://www.youtube.com/@Roxli-in" target="_blank">▶️ YouTube</a>
+    </div>
   </footer>
+
 </body>
 </html>
